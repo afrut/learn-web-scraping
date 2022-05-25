@@ -1,0 +1,1 @@
+$Env:PATH = "C:\WINDOWS\system32;D:\Python\Python39\Scripts\;D:\Python\Python39\;D:\Program Files\Git\cmd;D:\src\powershell-scripts\git\;D:\scripts;.\driver\"

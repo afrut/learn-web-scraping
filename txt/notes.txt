@@ -1,0 +1,2 @@
+See Drivers section in https://selenium-python.readthedocs.io/installation.html
+to download the appropriate chrome driver for Selenium.
