@@ -53,9 +53,15 @@ def cookSoup(soup: BeautifulSoup) -> list:
 if __name__ == "__main__":
     sp.call("cls", shell = True)
 
+    chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+    chromeDriverPath = ".\\driver\\chromedriver.exe"
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--window-size=1920,1080")
+    options.binary_location = chromePath
     jobs = dict()
     hashKeys = set()
-    with webdriver.Chrome() as driver:
+    with webdriver.Chrome(executable_path = chromeDriverPath, chrome_options = options) as driver:
         for start in range(740, 800, 10):
             url = "https://ca.indeed.com/jobs?q=developer&l=Canada&sort=date&filter=0" + f"&start={start}"
             soup = getSoup(url, driver)
