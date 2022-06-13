@@ -54,7 +54,7 @@ if __name__ == "__main__":
     sp.call("cls", shell = True)
 
     chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-    chromeDriverPath = ".\\driver\\chromedriver.exe"
+    chromeDriverPath = "D:\\scraping\\driver\\chromedriver.exe"
     options = Options()
     options.add_argument("--headless")
     options.add_argument("--window-size=1920,1080")
