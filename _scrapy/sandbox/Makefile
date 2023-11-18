@@ -3,7 +3,7 @@
 # Multi-line commands need to be escaped with backslash.
 # Comments can exist inside targets but must escape newline with backslash.
 
-all: basics quotes
+all: basics quotes crawlspider
 
 clean:
 	@# Remove all files and directories in outputs/ except .gitkeep \
@@ -14,7 +14,10 @@ crawl:
 	scrapy crawl quotes -o outputs/quotes.jsonl
 
 basics:
-	scrapy crawl basics
+	@scrapy crawl basics
 
 quotes:
-	scrapy crawl quotes -o outputs/quotes.jsonl
+	@scrapy crawl quotes -o outputs/quotes.jsonl
+
+crawlspider:
+	@scrapy crawl crawlspider -o outputs/crawlspider.jsonl
