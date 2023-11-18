@@ -77,3 +77,25 @@ class QuotesSpider(scrapy.Spider):
         filename = f"quotes-{page}.html"
         Path(filename).write_bytes(response.body)
         self.log(f"Saved file {filename}")
+
+        # Follow next link
+        next_page = response.css("nav ul.pager li.next a::attr(href)").get()
+        if next_page:
+            next_url = response.urljoin(next_page)
+            yield scrapy.Request(next_url, callback=self.parse)
+
+            # # Alternatively, use response.follow
+            # yield response.follow(next_page, callback=self.parse)
+
+        # # response.follow also takes a selector. No need for .get() or .getall()
+        # for next_page in response.css("nav ul.pager li.next a::attr(href)"):
+        #     yield respoinse.follow(next_page, callback=self.parse)
+
+        # # For a elements, response.follow automatically uses its href attribute
+        # for next_page in response.css("nav ul.pager li.next a"):
+        #     yield respoinse.follow(next_page, callback=self.parse)
+
+        # # Follow all from an Iterable
+        # yield from response.follow_all(
+        #     css="nav ul.pager li.next a", callback=self.parse
+        # )
