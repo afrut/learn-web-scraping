@@ -1,3 +1,9 @@
 - Explore XPath.
 - Explore .re().
 - Explore [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline).
+- Explore [Passing additional data to callbacks](https://docs.scrapy.org/en/latest/topics/request-response.html#topics-request-response-ref-request-callback-arguments)
+- Explore [Spider arguments](https://docs.scrapy.org/en/latest/topics/spiders.html#spiderargs)
+- [Generic spider CrawlSpider that implements a rule engine](https://docs.scrapy.org/en/latest/topics/spiders.html#scrapy.spiders.CrawlSpider)
+- [Overview](https://docs.scrapy.org/en/latest/intro/overview.html#intro-overview)
+- [Basics](https://docs.scrapy.org/en/latest/index.html#section-basics)
+- [Examples](https://docs.scrapy.org/en/latest/intro/examples.html#intro-examples)
