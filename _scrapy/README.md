@@ -22,6 +22,16 @@
   cd sandbox
   scrapy crawl basics
   ```
+- Run the spider and write results to a json file outputs/quotes.json. This
+  overwrites any existing file.
+  ```
+  scrapy crawl quotes -O outputs/quotes.json
+  ```
+- Run the spider and append results to a multi-line json file
+  outputs/quotes.jsonl.
+  ```
+  scrapy crawl quotes -o outputs/quotes.jsonl
+  ```
 
 # Other Tools
 - [Selector Gadget](https://selectorgadget.com/)

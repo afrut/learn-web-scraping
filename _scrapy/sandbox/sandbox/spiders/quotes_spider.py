@@ -43,13 +43,10 @@ class QuotesSpider(scrapy.Spider):
                 </div>
             </div>
         """
-        d = []
+
         for div_quote in response.css("div.quote"):
             quote: list[str] = div_quote.css("span.text::text").getall()
             quote = [q.replace("\u201c", "").replace("\u201d", "") for q in quote]
             author: list[str] = div_quote.css("span small.author::text").getall()
             tags: list[str] = div_quote.css("div.tags a.tag::text").getall()
-            d.append({"quote": quote, "author": author, "tags": tags})
-
-        with open("./outputs/quotes.json", "at") as fl:
-            fl.write(json.dumps(d) + "\n")
+            yield {"quote": quote, "author": author, "tags": tags}
