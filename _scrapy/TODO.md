@@ -1,1 +1,3 @@
 - Explore XPath.
+- Explore .re().
+- Explore [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline).
