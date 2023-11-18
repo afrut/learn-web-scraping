@@ -74,7 +74,7 @@ class QuotesSpider(scrapy.Spider):
 
         # Write content of response to file
         page = response.url.split("/")[-2]
-        filename = f"quotes-{page}.html"
+        filename = f"outputs/quotes-{page}.html"
         Path(filename).write_bytes(response.body)
         self.log(f"Saved file {filename}")
 
