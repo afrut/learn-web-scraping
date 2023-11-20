@@ -11,7 +11,7 @@ basics:
 	@scrapy crawl basics
 
 quotes:
-	@scrapy crawl quotes -o outputs/quotes.jsonl -t jsonlines
+	@scrapy crawl quotes -o outputs/quotes.jsonl -t jsonlines --logfile outputs/qutoes.log
 
 crawlspider:
-	@scrapy crawl crawlspider -o outputs/crawlspider.jsonl -t jsonlines
+	@scrapy crawl crawlspider -o outputs/crawlspider.jsonl -t jsonlines --logfile outputs/crawlspider.log
