@@ -44,6 +44,12 @@ class QuotesSpider(scrapy.Spider):
             </div>
         """
 
+        self.log(
+            "User-Agent = {}".format(
+                response.request.headers["User-Agent"].decode("utf-8")
+            )
+        )
+
         # Logic to parse the page
         for div_quote in response.css("div.quote"):
             quote: list[str] = div_quote.css("span.text::text").getall()
@@ -51,6 +57,8 @@ class QuotesSpider(scrapy.Spider):
             author: list[str] = div_quote.css("span small.author::text").getall()
             tags: list[str] = div_quote.css("div.tags a.tag::text").getall()
             yield {"quote": quote, "author": author, "tags": tags}
+
+        self.log("User-Agent = {}".format(response.request.headers["User-Agent"]))
 
         # Follow next link
         yield from response.follow_all(response.css("nav ul.pager li.next a"))

@@ -101,4 +101,8 @@ class QuotesSpider(scrapy.Spider):
         # )
 
         # Log the header used by the request
-        self.log(response.request.headers["User-Agent"].decode("utf-8"))
+        self.log(
+            "User-Agent = {}".format(
+                response.request.headers["User-Agent"].decode("utf-8")
+            )
+        )

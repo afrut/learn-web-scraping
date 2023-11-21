@@ -36,6 +36,12 @@ class MySpider(CrawlSpider):
         yield from self.parse(response)
 
     def parse(self, response):
+        self.log(
+            "User-Agent = {}".format(
+                response.request.headers["User-Agent"].decode("utf-8")
+            )
+        )
+
         for div_quote in response.css("div.quote"):
             quote = div_quote.css("span.text::text").getall()
             quote = [q.replace("\u201c", "").replace("\u201d", "") for q in quote]

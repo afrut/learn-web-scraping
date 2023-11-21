@@ -33,6 +33,12 @@
   scrapy crawl quotes -o outputs/quotes.jsonl
   ```
 
+# Rotating User Agents
+- [Scrapy rotating user agents in spider](https://stackoverflow.com/questions/67664845/scrapy-rotating-user-agents-in-spider)
+- [fake-useragent](https://pypi.org/project/fake-useragent/)
+- [How can I use a random user agent whenever I send a request?](https://stackoverflow.com/questions/67401114/how-can-i-use-a-random-user-agent-whenever-i-send-a-request/67432447#67432447)
+- [Scrapy Fake User Agents: How to Manage User Agents When Scraping](https://scrapeops.io/python-scrapy-playbook/scrapy-managing-user-agents/#what-are-user-agents--why-do-we-need-to-manage-them)
+
 # Other Tools
 - [Selector Gadget](https://selectorgadget.com/)
 
