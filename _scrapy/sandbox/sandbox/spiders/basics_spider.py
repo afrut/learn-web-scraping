@@ -100,7 +100,7 @@ class QuotesSpider(scrapy.Spider):
         #     css="nav ul.pager li.next a", callback=self.parse
         # )
 
-        # Log the header used by the request
+        # Log the user used by the request
         self.log(
             "User-Agent = {}".format(
                 response.request.headers["User-Agent"].decode("utf-8")
