@@ -8,7 +8,7 @@ clean:
 	ls outputs | grep -v ".gitkeep" | xargs printf './outputs/%s\n' | xargs rm -rf
 
 basics:
-	@scrapy crawl basics
+	@scrapy crawl basics --logfile outputs/basics.log
 
 quotes:
 	@scrapy crawl quotes -o outputs/quotes.jsonl -t jsonlines --logfile outputs/qutoes.log
