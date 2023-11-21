@@ -99,3 +99,6 @@ class QuotesSpider(scrapy.Spider):
         # yield from response.follow_all(
         #     css="nav ul.pager li.next a", callback=self.parse
         # )
+
+        # Log the header used by the request
+        self.log(response.request.headers["User-Agent"].decode("utf-8"))
