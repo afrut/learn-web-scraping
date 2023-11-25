@@ -40,10 +40,12 @@
   - [Scrapy Fake User Agents: How to Manage User Agents When Scraping](https://scrapeops.io/python-scrapy-playbook/scrapy-managing-user-agents/#what-are-user-agents--why-do-we-need-to-manage-them)
 
 # Proxies and Rotating IPs
-- [Check the IP address scrapy is using to crawl](https://stackoverflow.com/questions/27364630/get-proxy-ip-address-scrapy-using-to-crawl)
-- [scrapoxy](https://www.scrapoxy.io/)
-- [scrapy-rotating-proxies](https://github.com/TeamHG-Memex/scrapy-rotating-proxies)
-- [Scrapy with a Rotating Tor Proxy](https://datawookie.dev/blog/2021/06/scrapy-rotating-tor-proxy/)
+  - Check IP currently being used by scrapy
+    ```
+    scrapy crawl checkip --logfile outputs/checkip.log
+    ```
+  - Links
+    - [scrapy-rotating-proxies](https://github.com/TeamHG-Memex/scrapy-rotating-proxies)
 
 # Other Tools
 - [Selector Gadget](https://selectorgadget.com/)
