@@ -1,6 +1,5 @@
 - [Avoid getting banned](https://docs.scrapy.org/en/latest/topics/practices.html#avoiding-getting-banned)
 - Explore XPath.
-- Explore .re().
 - Explore [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline).
 - Explore [Passing additional data to callbacks](https://docs.scrapy.org/en/latest/topics/request-response.html#topics-request-response-ref-request-callback-arguments)
 - Explore [Spider arguments](https://docs.scrapy.org/en/latest/topics/spiders.html#spiderargs)
