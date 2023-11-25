@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 import scrapy
@@ -100,7 +101,7 @@ class QuotesSpider(scrapy.Spider):
         #     css="nav ul.pager li.next a", callback=self.parse
         # )
 
-        # Log the user used by the request
+        # Log the user-agent used by the request
         self.log(
             "User-Agent = {}".format(
                 response.request.headers["User-Agent"].decode("utf-8")

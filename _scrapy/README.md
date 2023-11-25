@@ -39,6 +39,12 @@
 - [How can I use a random user agent whenever I send a request?](https://stackoverflow.com/questions/67401114/how-can-i-use-a-random-user-agent-whenever-i-send-a-request/67432447#67432447)
 - [Scrapy Fake User Agents: How to Manage User Agents When Scraping](https://scrapeops.io/python-scrapy-playbook/scrapy-managing-user-agents/#what-are-user-agents--why-do-we-need-to-manage-them)
 
+# Proxies and Rotating IPs
+- [Check the IP address scrapy is using to crawl](https://stackoverflow.com/questions/27364630/get-proxy-ip-address-scrapy-using-to-crawl)
+- [scrapoxy](https://www.scrapoxy.io/)
+- [scrapy-rotating-proxies](https://github.com/TeamHG-Memex/scrapy-rotating-proxies)
+- [Scrapy with a Rotating Tor Proxy](https://datawookie.dev/blog/2021/06/scrapy-rotating-tor-proxy/)
+
 # Other Tools
 - [Selector Gadget](https://selectorgadget.com/)
 
