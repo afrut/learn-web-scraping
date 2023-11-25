@@ -47,6 +47,47 @@
   - Links
     - [scrapy-rotating-proxies](https://github.com/TeamHG-Memex/scrapy-rotating-proxies)
 
+# Using Scrapoxy
+  - [Get AWS EC2 Credentials](https://scrapoxy.readthedocs.io/en/master/standard/providers/awsec2/get_credentials/index.html)
+  - [Create a Security Group](https://scrapoxy.readthedocs.io/en/master/standard/providers/awsec2/create_security_group/index.html)
+  - [Copy the forward-proxy AMI to your region](https://scrapoxy.readthedocs.io/en/master/standard/providers/awsec2/copy_ami_to_region/index.html)
+  - [Run scrapoxy without Docker](sudo apt-get install build-essential)
+    - Install make
+      ```
+      sudo apt-get install build-essential
+      ```
+    - Install nodejs and npm
+      ```
+      sudo apt update
+      sudo apt install nodejs npm
+      ```
+    - Install scrapoxy
+      ```
+      sudo npm install -g scrapoxy
+      ```
+    - Create a scrapoxy configuration
+      ```
+      scrapoxy init ~/scrapoxy_conf.json
+      ```
+    - Modify this file and configure with AWS EC2 info
+    - Add an environment variable `SCRAPOXY_CONF_PATH` pointing to this file
+    - Run scrapoxy
+      ```
+      scrapoxy start "${SCRAPOXY_CONF_PATH}" -d
+      ```
+  - Open scrapoxy GUI at [this localhost link](http://localhost:8889)
+  - [Configure the scraper to use scrapoxy](https://scrapoxy.readthedocs.io/en/master/tutorials/python-scrapy/#edit-settings-of-the-scraper)
+  - Create an environment variable `SCRAPOXY_PASSWORD` to store the password
+    used to authenticate to scrapoxy
+  - [Test scrapoxy](https://scrapoxy.readthedocs.io/en/master/quick_start/index.html#step-6-test-scrapoxy)
+    ```
+    scrapoxy test http://localhost:8888
+    curl --proxy http://127.0.0.1:8888 http://api.ipify.org
+    ```
+  - Links
+    - [scrapoxy](https://www.scrapoxy.io/)
+    - [scrapoxy Documentation](https://scrapoxy.readthedocs.io/en/master/index.html)
+
 # Other Tools
   - [Selector Gadget](https://selectorgadget.com/)
 

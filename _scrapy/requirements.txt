@@ -28,6 +28,7 @@ python-dateutil==2.8.2
 queuelib==1.6.2
 requests==2.31.0
 requests-file==1.5.1
+scrapoxy==1.11
 Scrapy==2.11.0
 scrapy-fake-useragent==1.4.4
 service-identity==23.1.0

@@ -1,3 +1,5 @@
+import os
+
 # Scrapy settings for sandbox project
 #
 # For simplicity, this file contains only settings considered important or
@@ -27,7 +29,8 @@ ROBOTSTXT_OBEY = True
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
-# CONCURRENT_REQUESTS_PER_DOMAIN = 16
+# Set to 1 for scrapoxy
+CONCURRENT_REQUESTS_PER_DOMAIN = 1
 # CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
@@ -48,9 +51,20 @@ COOKIES_ENABLED = False
 #    "sandbox.middlewares.SandboxSpiderMiddleware": 543,
 # }
 
+# scrapoxy settings
+PROXY = "http://127.0.0.1:8888/?noconnect"
+
+# SCRAPOXY
+API_SCRAPOXY = "http://127.0.0.1:8889/api"
+API_SCRAPOXY_PASSWORD = os.environ.get("SCRAPOXY_PASSWORD")
+
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
+    "scrapoxy.downloadmiddlewares.proxy.ProxyMiddleware": 100,
+    "scrapoxy.downloadmiddlewares.wait.WaitMiddleware": 101,
+    "scrapoxy.downloadmiddlewares.scale.ScaleMiddleware": 102,
+    "scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware": None,
     "scrapy.downloadermiddlewares.useragent.UserAgentMiddleware": None,
     "scrapy.downloadermiddlewares.retry.RetryMiddleware": None,
     "scrapy_fake_useragent.middleware.RandomUserAgentMiddleware": 400,
