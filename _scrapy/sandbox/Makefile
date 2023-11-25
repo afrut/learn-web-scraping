@@ -15,3 +15,6 @@ quotes:
 
 crawlspider:
 	@scrapy crawl crawlspider -o outputs/crawlspider.jsonl -t jsonlines --logfile outputs/crawlspider.log
+
+checkip:
+	@scrapy crawl checkip --logfile outputs/checkip.log
