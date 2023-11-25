@@ -1,4 +1,8 @@
 - [Avoid getting banned](https://docs.scrapy.org/en/latest/topics/practices.html#avoiding-getting-banned)
+- Scrapoxy
+  - When integrating with scrapoxy, change AWS credentials to not use a root user.
+  - On AWS, try to modify security group to only allow my IP.
+  - Try to dockerize the scrapoxy service.
 - Explore XPath.
 - Explore [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline).
 - Explore [Passing additional data to callbacks](https://docs.scrapy.org/en/latest/topics/request-response.html#topics-request-response-ref-request-callback-arguments)
