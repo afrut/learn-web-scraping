@@ -51,7 +51,7 @@
   - [Get AWS EC2 Credentials](https://scrapoxy.readthedocs.io/en/master/standard/providers/awsec2/get_credentials/index.html)
   - [Create a Security Group](https://scrapoxy.readthedocs.io/en/master/standard/providers/awsec2/create_security_group/index.html)
   - [Copy the forward-proxy AMI to your region](https://scrapoxy.readthedocs.io/en/master/standard/providers/awsec2/copy_ami_to_region/index.html)
-  - [Run scrapoxy without Docker](sudo apt-get install build-essential)
+  - [Run scrapoxy without Docker](https://scrapoxy.readthedocs.io/en/master/quick_start/index.html#step-3b-run-scrapoxy-without-docker)
     - Install make
       ```
       sudo apt-get install build-essential
