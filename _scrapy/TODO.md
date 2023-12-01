@@ -1,6 +1,5 @@
 - [Avoid getting banned](https://docs.scrapy.org/en/latest/topics/practices.html#avoiding-getting-banned)
 - Scrapoxy
-  - Try to dockerize the scrapoxy service.
   - Try to use temporary credentials instead of an access key.
 - Explore XPath.
 - Explore [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline).
