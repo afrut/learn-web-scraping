@@ -88,6 +88,24 @@
     - [scrapoxy](https://www.scrapoxy.io/)
     - [scrapoxy Documentation](https://scrapoxy.readthedocs.io/en/master/index.html)
 
+  ## Dockerize scrapoxy
+  - Build the image
+    ```
+    make build
+    ```
+  - Run the interactive container
+    ```
+    make run_interactive
+    ```
+  - Run the service container
+    ```
+    make run
+    ```
+  - Cleanup
+    ```
+    make clean_docker
+    ```
+
 # Other Tools
   - [Selector Gadget](https://selectorgadget.com/)
 

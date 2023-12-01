@@ -18,3 +18,30 @@ crawlspider:
 
 checkip:
 	@scrapy crawl checkip --logfile outputs/checkip.log
+
+build:
+	@docker build --tag scrapoxy \
+		--build-arg scrapoxy_conf_path="${SCRAPOXY_CONF_PATH}" \
+		- < Dockerfile
+
+run_interactive:
+	@docker run --interactive --tty \
+		--name scrapoxy_tty \
+		--mount type=bind,source="${SCRAPOXY_CONF_PATH}",destination="/scrapoxy/scrapoxy_conf.json",readonly \
+		--entrypoint="/bin/bash" \
+		scrapoxy
+
+run:
+	@docker run --detach \
+		--name scrapoxy_server \
+		--publish 8888:8888 \
+		--publish 8889:8889 \
+		--mount type=bind,source="${SCRAPOXY_CONF_PATH}",destination="/scrapoxy/scrapoxy_conf.json",readonly \
+		scrapoxy scrapoxy start "/scrapoxy/scrapoxy_conf.json"
+
+clean_docker:
+	@docker kill scrapoxy_server;\
+	docker rm -f scrapoxy_server;\
+	docker rm -f scrapoxy_tty
+
+# "scrapoxy start /scrapoxy/scrapoxy_conf.json"
