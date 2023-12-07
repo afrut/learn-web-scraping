@@ -1,4 +1,4 @@
-- [Avoid getting banned](https://docs.scrapy.org/en/latest/topics/practices.html#avoiding-getting-banned)
+- Explore using Playwright.
 - Explore XPath.
 - Explore [Item Pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html#topics-item-pipeline).
 - Explore [Passing additional data to callbacks](https://docs.scrapy.org/en/latest/topics/request-response.html#topics-request-response-ref-request-callback-arguments)

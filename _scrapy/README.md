@@ -113,3 +113,4 @@
   - [Installation Guide](https://docs.scrapy.org/en/latest/intro/install.html)
   - [Tutorial](https://docs.scrapy.org/en/latest/intro/tutorial.html#creating-a-project)
   - [CSS Selectors Reference](https://www.w3schools.com/cssref/css_selectors.php)
+  - [Avoid getting banned](https://docs.scrapy.org/en/latest/topics/practices.html#avoiding-getting-banned)
