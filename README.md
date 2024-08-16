@@ -9,7 +9,12 @@
 
 # Usage
 
-- Activate environment
-  ```
-  .\env\Scripts\activate
-  ```
+Use powershell.
+
+```
+# Activate environment
+.\env\Scripts\activate
+
+# Basics of using selenium
+python selenium_basics.py
+```
