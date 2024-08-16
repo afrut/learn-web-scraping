@@ -6,5 +6,5 @@ if __name__ == "__main__":
     options = webdriver.ChromeOptions()
     driver = webdriver.Chrome(options=options)
     driver.get("https://www.saucedemo.com/")
-    embed()
+    # embed() # uncomment to pause execution
     driver.close()
