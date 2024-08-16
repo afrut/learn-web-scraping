@@ -1,7 +1,15 @@
-# Setup
+# Setup on Windows
 
-```
-pyenv virtualenv 3.12.3 learn-web-scraping
-pyenv local learn-web-scraping
-pip install -r requirements.txt
-```
+- Create environment
+  ```
+  python -m venv env
+  .\env\Scripts\activate
+  pip install -r requirements.txt
+  ```
+
+# Usage
+
+- Activate environment
+  ```
+  .\env\Scripts\activate
+  ```
