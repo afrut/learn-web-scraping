@@ -6,6 +6,7 @@
   .\env\Scripts\activate
   pip install -r requirements.txt
   ```
+- Add path of Google Chrome to PATH environment variable
 
 # Usage
 
