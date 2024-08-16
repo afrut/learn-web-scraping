@@ -17,4 +17,13 @@ Use powershell.
 
 # Basics of using selenium
 python selenium_basics.py
+
+# Basics of making api requests
+python requests_basics.py
+
+# Basics of bs4
+python bs4_basics.py
+
+# Deactivate environment
+deactivate
 ```
