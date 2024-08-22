@@ -8,6 +8,12 @@
   ```
 - Add path of Google Chrome to PATH environment variable
 
+## Credentials
+
+- Set the following environment variables
+  - SAUCEDEMO_USERNAME
+  - SAUCEDEMO_PASSWORD
+
 # Usage
 
 Use powershell.
