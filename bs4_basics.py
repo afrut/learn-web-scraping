@@ -33,3 +33,5 @@ if __name__ == "__main__":
     # Find all hyperlink tags and retrieve url (href attribute) for 2nd tag
     hls = list(parents[0].find_all("a"))
     url = hls[1]["href"]
+
+    # See saucedemo for more in-depth usage of beautifulsoup
